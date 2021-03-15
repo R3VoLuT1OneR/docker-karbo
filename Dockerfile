@@ -1,7 +1,7 @@
 FROM ubuntu:20.04 AS builder
 
 ARG KARBO_GIT_REPOSITORY="https://github.com/Karbovanets/karbo.git"
-ARG KARBO_GIT_TAG="v.2.3.8"
+ARG KARBO_GIT_TAG="v.2.3.9"
 
 WORKDIR /src
 
