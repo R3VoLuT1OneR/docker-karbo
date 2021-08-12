@@ -1,15 +1,15 @@
 FROM ubuntu:20.04 AS builder
 
-ARG KARBO_GIT_REPOSITORY="https://github.com/Karbovanets/karbo.git"
-ARG KARBO_GIT_TAG="v.2.3.9"
-
-WORKDIR /src
-
 RUN set -x \
     && export DEBIAN_FRONTEND="noninteractive" \
     && apt-get update 1>/dev/stdout \
     && apt-get install -y build-essential git cmake libssl-dev libboost-all-dev 1>/dev/stdout \
     && rm -rf /var/lib/apt/lists/*
+
+ARG KARBO_GIT_REPOSITORY="https://github.com/Karbovanets/karbo.git"
+ARG KARBO_GIT_TAG="v.2.4.1"
+
+WORKDIR /src
 
 RUN git clone ${KARBO_GIT_REPOSITORY} /src/karbo --branch=${KARBO_GIT_TAG} --depth=1 1>/dev/null 2>&1
 
