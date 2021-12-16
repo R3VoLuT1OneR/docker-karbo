@@ -1,6 +1,6 @@
 # Docker-Karbo
 [Karbo](https://karbo.io) it is anonymous cryptocurrency.
-Karbo uses peer-to-peer network to synchronize decentrilized ledger between it's nodes.
+Karbo uses peer-to-peer network to synchronize decentralized ledger between it's nodes.
 Each node has a copy of all ever done transactions in the network.
 
 This Docker image include last version program to run Karbo node `karbowanecd`.
@@ -14,6 +14,16 @@ $ docker run r3volut1oner/karbo
 ```
 
 As node must run on latest software version, it is recommended default `latest` tag that will be always updated.
+
+### Development
+After version update we must manually build and push the image to the [docker hub](https://hub.docker.com/).
+
+```shell
+KARBO_VERSION="2.5.0"
+docker build . -t r3volut1oner/karbo:${KARBO_VERSION} -t r3volut1oner/karbo:latest
+docker push r3volut1oner/karbo:${KARBO_VERSION}
+docker push r3volut1oner/karbo:latest
+```
 
 ### License
 Configuration files and code in this repository are distributed under the [MIT license](/LICENSE).

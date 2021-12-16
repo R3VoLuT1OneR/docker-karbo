@@ -7,7 +7,7 @@ RUN set -x \
     && rm -rf /var/lib/apt/lists/*
 
 ARG KARBO_GIT_REPOSITORY="https://github.com/Karbovanets/karbo.git"
-ARG KARBO_GIT_TAG="v.2.4.1"
+ARG KARBO_GIT_TAG="v.2.5.0"
 
 WORKDIR /src
 
