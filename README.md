@@ -19,10 +19,7 @@ As node must run on latest software version, it is recommended default `latest` 
 After version update we must manually build and push the image to the [docker hub](https://hub.docker.com/).
 
 ```shell
-KARBO_VERSION="2.5.0"
-docker build . -t r3volut1oner/karbo:${KARBO_VERSION} -t r3volut1oner/karbo:latest
-docker push r3volut1oner/karbo:${KARBO_VERSION}
-docker push r3volut1oner/karbo:latest
+./build_new_version.sh 2.5.1
 ```
 
 ### License
