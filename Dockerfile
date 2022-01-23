@@ -1,3 +1,5 @@
+# This first part are building the karbo cli tools for specific ubuntu version
+# Later we copy binaries to the clear version of ubuntu
 FROM ubuntu:20.04 AS builder
 
 RUN set -x \
@@ -7,7 +9,7 @@ RUN set -x \
     && rm -rf /var/lib/apt/lists/*
 
 ARG KARBO_GIT_REPOSITORY="https://github.com/Karbovanets/karbo.git"
-ARG KARBO_GIT_TAG="v.2.5.0"
+ARG KARBO_GIT_TAG="v.2.5.1"
 
 WORKDIR /src
 
