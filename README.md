@@ -10,7 +10,7 @@ As well image includes utility and CLI wallet tools like: `walletd`, `simplewall
 ### Usage
 To run the latest version of karbo node simple as:
 ```shell
-$ docker run r3volut1oner/karbo
+$ docker run -it r3volut1oner/karbo karbowanecd
 ```
 
 As node must run on latest software version, it is recommended default `latest` tag that will be always updated.
@@ -19,7 +19,7 @@ As node must run on latest software version, it is recommended default `latest` 
 After version update we must manually build and push the image to the [docker hub](https://hub.docker.com/).
 
 ```shell
-./build_new_version.sh 2.5.1
+./build.sh 2.5.1
 ```
 
 ### License

@@ -3,7 +3,7 @@ set -e
 
 if [ "$#" -ne "1" ]
 then
-  echo "Usage: script.sh \$KARBO_VERSION"
+  echo "Usage: $0 \$KARBO_VERSION"
   exit 1
 fi
 
